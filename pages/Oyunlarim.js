@@ -126,11 +126,4 @@ const Home = ({ posts }) => (
   </div>  
 );
 
-Home.getInitialProps = async ({ req }) => {
-  // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-  const res = await fetch("https://mukemmel-blog-benim.herokuapp.com/Oyunlarim");
-  const json = await res.json();
-  return { posts: json.posts };
-};
-
 export default Home;
